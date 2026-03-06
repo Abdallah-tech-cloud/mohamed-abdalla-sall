@@ -1,7 +1,16 @@
-console.log("Bienvenue sur le site officiel de Mohamed Djafar Abdalla Sall");
+// Affichage des sections avec fade-in
+const faders = document.querySelectorAll('.fade-in');
 
-document.querySelectorAll("a").forEach(link => {
-link.addEventListener("click", function(){
-console.log("Navigation sur le site");
+const appearOptions = { threshold: 0.1 };
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+entries.forEach(entry=>{
+    if(!entry.isIntersecting) return;
+    entry.target.classList.add('show');
+    observer.unobserve(entry.target);
 });
-});
+}, appearOptions);
+
+faders.forEach(fader => { appearOnScroll.observe(fader); });
+
+console.log("Bienvenue sur le site ultra-professionnel de Mohamed Djafar Abdalla Sall");
