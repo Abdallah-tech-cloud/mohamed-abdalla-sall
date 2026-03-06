@@ -1,68 +1,102 @@
-body{
-font-family: Arial;
-margin:0;
-background:#0f172a;
-color:white;
+/* FOND ET TYPO */
+body {
+font-family: 'Roboto', sans-serif;
+margin: 0;
+background: linear-gradient(135deg,#0f172a,#1e293b);
+color: #fff;
+scroll-behavior: smooth;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px;
-background:#020617;
+/* NAVIGATION */
+nav {
+display: flex;
+justify-content: space-between;
+padding: 20px 50px;
+background: rgba(0,0,0,0.6);
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 10;
 }
 
-nav ul{
-display:flex;
-list-style:none;
-}
+nav ul { display: flex; list-style:none; margin:0; }
 
-nav ul li{
-margin-left:20px;
-}
+nav ul li { margin-left: 25px; }
 
-nav a{
-color:white;
-text-decoration:none;
-}
+nav a { color:white; text-decoration:none; font-weight:500; transition:0.3s; }
 
-.hero{
-height:80vh;
+nav a:hover { color:#38bdf8; }
+
+.logo { font-weight:700; font-size:24px; letter-spacing:2px; }
+
+/* HERO */
+.hero {
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding-top:60px;
 }
 
-.hero h1{
-font-size:40px;
+.profile-img {
+width:150px;
+height:150px;
+border-radius:50%;
+border:4px solid #38bdf8;
+margin-bottom:20px;
+transition: transform 0.5s;
 }
 
-.btn{
+.profile-img:hover { transform: scale(1.1); }
+
+.hero h1 { font-size:48px; margin:10px 0; }
+.hero p { font-size:20px; margin:10px 0; }
+.btn {
 background:#38bdf8;
-padding:12px 25px;
 color:black;
+padding:12px 30px;
+border-radius:8px;
 text-decoration:none;
 margin-top:20px;
-border-radius:5px;
+font-weight:600;
+transition:0.3s;
 }
 
-section{
-padding:60px;
-text-align:center;
-}
+.btn:hover { background:#22c55e; color:white; }
 
-.cards{
+/* SECTIONS */
+section { padding:80px 20px; text-align:center; }
+h2 { font-size:36px; margin-bottom:30px; }
+
+/* CARDS PROJETS */
+.cards {
 display:flex;
 justify-content:center;
-gap:20px;
+gap:25px;
 flex-wrap:wrap;
 }
 
-.card{
-background:#1e293b;
+.card {
+background: rgba(0,0,0,0.5);
 padding:20px;
+border-radius:15px;
 width:250px;
-border-radius:10px;
-  }
+transition:0.3s;
+}
+
+.card:hover { transform: translateY(-10px); background: rgba(56, 221, 248, 0.5); }
+
+.card img { width:100%; border-radius:10px; margin-bottom:15px; }
+
+/* FOOTER */
+footer {
+background:#020617;
+padding:20px;
+}
+
+/* FADE-IN ANIMATION */
+.fade-in { opacity:0; transform: translateY(20px); transition:1s ease-in-out; }
+
+.fade-in.show { opacity:1; transform: translateY(0); }
