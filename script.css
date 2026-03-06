@@ -1,22 +1,68 @@
 body{
 font-family: Arial;
 margin:0;
-background:#f4f4f4;
+background:#0f172a;
+color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px;
+background:#020617;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
 }
 
-header{
-background:#003366;
-color:white;
-padding:30px;
+.hero h1{
+font-size:40px;
+}
+
+.btn{
+background:#38bdf8;
+padding:12px 25px;
+color:black;
+text-decoration:none;
+margin-top:20px;
+border-radius:5px;
 }
 
 section{
-padding:30px;
+padding:60px;
+text-align:center;
 }
 
-footer{
-background:#222;
-color:white;
-padding:15px;
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
+
+.card{
+background:#1e293b;
+padding:20px;
+width:250px;
+border-radius:10px;
+  }
